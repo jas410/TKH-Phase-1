@@ -11,5 +11,4 @@ echo "[*] Initiating Container Deployment..."
 # YOUR COMMAND HERE:
 docker run -d --name training-web -p 8080:80 nginx
 
-
 echo "[+] Deployment command executed."
