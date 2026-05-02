@@ -30,7 +30,7 @@ A clean Week 2 title that matches the style of your Week 1 README is:
 
 ---
 
-## 🗂️ **Week 2 – Network Recovery, Protocol Analysis & Subnet Engineering**
+# 🗂️ **Week 2 – Network Recovery, Protocol Analysis & Subnet Engineering**
 
 ### 🛰️ **network_audit.txt — Network Interface Recovery & Routing**
 You restored connectivity on a headless Ubuntu system by diagnosing inactive network interfaces, assigning IP information, and rebuilding the default gateway route. This demonstrates your ability to manage Linux network interfaces, interpret routing tables, and verify connectivity using the `ip` command suite.
