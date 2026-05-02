@@ -1,0 +1,21 @@
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0@if8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1460 qdisc noqueue state UP group default qlen 1000
+    link/ether 5a:04:cf:77:04:fd brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 10.88.0.4/16 brd 10.88.255.255 scope global eth0
+       valid_lft forever preferred_lft forever
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1460 qdisc noqueue state DOWN group default 
+    link/ether 6e:0e:76:8b:d9:7c brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=1.43 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=0.639 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=0.518 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=0.671 ms
+
+--- 8.8.8.8 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3049ms
+rtt min/avg/max/mdev = 0.518/0.813/1.427/0.358 ms

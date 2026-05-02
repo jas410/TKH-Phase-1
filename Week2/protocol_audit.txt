@@ -1,0 +1,2 @@
+108.177.12.138
+Metadata Server for VM
