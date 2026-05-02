@@ -1,6 +1,6 @@
 ---
 
-# 🗂️We Wkek 1 – Linux Foundations & Intro Security Labs
+# 🗂️Week 1 – Linux Foundations & Intro Security Labs
 
 This week focused on learning how to operate a Linux system from the command line, secure files using permissions, and analyze logs for potential security threats. Each file in this folder represents a different skill area from the first set of labs.
 
