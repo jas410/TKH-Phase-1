@@ -45,10 +45,6 @@ I resolved a multi‑layer network failure by fixing an invalid subnet mask, rem
 
 ---
 
-Here is your **fully rewritten Week 3 README**, written entirely in **first‑person**, matching the tone and structure of your Week1 and Week2 READMEs, and polished for employers reviewing your portfolio.
-
-You can paste this directly into:
-
 `portfolio/Week3/README.md`
 
 ---
