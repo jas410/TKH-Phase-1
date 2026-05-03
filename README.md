@@ -79,4 +79,3 @@ For this take‑home incident response lab, I built a Python script that extract
 
 ---
 
-If you want, I can help you move Week3 into your portfolio repo and commit this README cleanly.
