@@ -73,3 +73,6 @@ For this take‑home incident response lab, I built a Python script that extract
 
 ---
 
+## 🗂️ **Week 4 – Infrastructure Hardening & Secure Virtual Environments**
+
+Although Week 4 isn’t represented in my GitHub repository, the focus of Week 4 was learning how to harden the environments that security tools run in by working across three layers of modern infrastructure: virtual machines, containers, and orchestrated multi‑service networks. I configured isolated virtual networks, built secure sandboxes for malware detonation, deployed lightweight containers using Docker, and designed segmented application stacks with Docker Compose. This week emphasized turning default, exposed systems into controlled, monitored, and defensible environments—strengthening my ability to architect secure infrastructure rather than just operate within it.
