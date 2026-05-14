@@ -1,0 +1,52 @@
+===========================================
+API Audit Log – S27
+Author: Jasmine
+===========================================
+
+
+SECTION 1: BOLA VULNERABILITY (ID SWAP)
+-------------------------------------------
+Original request:
+GET /api/v1/profile/101
+
+Modified request:
+GET /api/v1/profile/102
+
+Leaked secret from the CISO profile:
+admin_secret: CISO-KEY-9981
+
+Explanation:
+The API lets anyone change the ID number in the URL and access another user’s profile. There is no authorization check, which makes this a BOLA (Broken Object Level Authorization) vulnerability.
+
+
+SECTION 2: BUSINESS LOGIC FLAW (DISCOUNT BRUTE FORCE)
+-------------------------------------------
+Captured request body:
+{"discount_code": "0000"}
+
+Intruder attack range:
+9900 → 9999
+
+Successful discount code:
+9999
+
+Server response:
+"discount": "100% OFF"
+
+Explanation:
+The API accepts any 4‑digit code and does not limit attempts. Because there is no rate limiting or server-side validation, the discount code can be brute‑forced easily.
+
+
+SECTION 3: RECOMMENDATIONS
+-------------------------------------------
+- Add authorization checks so users can only access their own profile.
+- Use non-sequential, random identifiers instead of predictable numbers.
+- Add rate limiting to stop brute-force attacks.
+- Validate discount codes on the server side.
+- Log repeated failed attempts and alert admins.
+- Never trust user-controlled input in URLs or request bodies.
+
+
+===========================================
+END OF LOG
+===========================================

