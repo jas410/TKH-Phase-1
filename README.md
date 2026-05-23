@@ -8,7 +8,7 @@ This week focused on learning how to operate a Linux system from the command lin
 ---
 
 ## discovery.txt — Linux Navigation & System Exploration
-### Explored the filesystem, located hidden directories, and documented key system paths using terminal‑only navigation.
+#### Explored the filesystem, located hidden directories, and documented key system paths using terminal‑only navigation.
 
 ---
 
