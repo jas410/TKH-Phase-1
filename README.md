@@ -53,23 +53,22 @@ This week focused on building automated security tools using Python to replace m
 ---
 
 ## 🧪 **port_check.py — Automated Port Scanner & Access Validation**
-In this assignment, I created a Python script that checks whether Port 22 (SSH) is open across multiple target IP addresses. I began with foundational Python logic—lists, user input, and conditional checks—and then expanded into socket‑based network testing. My script loops through each IP, attempts a connection, and reports whether the port is OPEN or CLOSED. This demonstrates my ability to automate reconnaissance tasks and apply Python control flow, socket programming, and clean coding standards.
+I wrote a Python script that checks whether Port 22 is open across multiple IPs. I used lists, loops, and socket connections to test each host and report if the port was open or closed.
 
 ---
 
 ## 🔍 **brute_detector.py — Log Forensics & Brute‑Force Attack Detection**
-In this project, I built a Python tool that scans authentication logs to identify brute‑force attack attempts. My script reads raw log files, filters for “Failed password” events, counts occurrences, and exports a structured report. I used context managers for safe file handling, defensive programming with try/except, and forensic filtering techniques to extract high‑value security events. This showcases my ability to build reliable forensic tools that operate safely in production environments.
+II built a script that scans authentication logs for brute‑force attempts. I filtered for “Failed password” events, counted occurrences, and exported a clean report using safe file handling and defensive programming.
 
 ---
 
 ## 🛡️ **system_auditor.py — Automated Process Monitoring & JSON Alerting**
-In this assignment, I created an automated system auditor that detects unauthorized processes—such as cryptominers—running on a Linux server. Using Python’s `subprocess` module, I executed system commands, parsed process output, identified malicious activity, and generated a machine‑readable JSON alert. This demonstrates my ability to orchestrate OS‑level commands, analyze system state programmatically, and produce structured security intelligence for SOC workflows.
+I created a system auditor that detects unauthorized processes on a Linux server. I used subprocess to run system commands, parsed the output, and generated a JSON alert when suspicious activity appeared.
 
 ---
 
 ## ⚡ **incident_response.py — Automated Threat Hunting & JSON Reporting (TLAB)**
-For this take‑home incident response lab, I built a Python script that extracts attacker IPs from simulated brute‑force logs. I used subprocess to grep log entries, parsed the output to isolate IP addresses, and exported a JSON threat report containing all identified attackers. This assessment highlights my ability to automate log interrogation, perform stream parsing, and generate actionable forensic artifacts—key skills for incident response and threat detection roles.
-
+For this lab, I automated the extraction of attacker IPs from simulated brute‑force logs. I used subprocess and stream parsing to isolate malicious IPs and export a structured JSON threat report.
 ---
 
 # 🗂️ **Week 4 – Infrastructure Hardening & Secure Virtual Environments**
