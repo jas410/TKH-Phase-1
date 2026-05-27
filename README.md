@@ -107,6 +107,15 @@ I wasn’t able to complete the practical components because the provisioning sc
 
 # 📁 **Week 11 – Perimeter Defense, UFW Hardening & DMZ Firewall Engineering**
 
-Although I wasn’t able to complete the Week 11 “The Barricade” assignment, this week focused on learning how to harden the perimeter of a corporate web server using both UFW and raw iptables rules. The lab introduced how to build a secure default‑deny firewall posture, selectively allow essential services, and design DMZ routing rules that prevent lateral movement from a compromised external server to an internal database. I studied how host‑based firewalls enforce segmentation, how outbound restrictions limit attacker mobility, and how iptables chains can be engineered to create strict trust boundaries inside a multi‑tier environment.
+Week 11 focused on understanding how real organizations build layered defenses that work together to stop attackers at multiple points in the kill chain. Across four assignments, I explored how firewalls restrict movement, how IDS sensors detect malicious traffic, how Sysmon monitors endpoint behavior, and how all three layers combine into a unified Defense in Depth strategy.
 
-I wasn’t able to complete the practical components because the provisioning script required a persistent Ubuntu VM capable of running Docker Engine, systemd services, and a containerized DMZ environment. At the time, I was working inside a temporary playground environment that could not deploy the DMZ containers, initialize UFW properly, or maintain the iptables state needed for the advanced routing rules. Without a real VM, the dmz_web container could not be accessed, the firewall rules could not be applied, and the final firewall_config.sh artifact could not be generated. However, I reviewed the full workflow conceptually and documented the correct steps for UFW hardening, DMZ lockdown, and iptables‑based lateral movement prevention.
+In **The Barricade**, I learned how to harden a DMZ web server using UFW and iptables. The lab demonstrated how default‑deny policies, selective service allowances, and outbound filtering prevent a compromised server from reaching internal systems.
+
+In **The Tripwire**, I studied how intrusion detection systems use custom signatures to identify suspicious network activity. I practiced writing Suricata rules to detect ICMP reconnaissance and malware‑like User‑Agent strings targeting a web server.
+
+In **The Last Mile**, I focused on endpoint monitoring using Sysmon for Linux. I examined how Sysmon logs reveal hidden PowerShell behavior and how EDR policies use XML filters to detect ransomware precursor actions before encryption begins.
+
+Finally, **Operation Fortress** brought all three layers together. I learned how to block outbound C2 traffic with iptables, detect web‑shell exploitation with Suricata, and catch malicious payload downloads with Sysmon — creating a complete, layered defense architecture.
+
+I wasn’t able to complete the hands‑on portions of these assignments because they required a persistent Ubuntu VM capable of running Docker Engine, Suricata containers, Sysmon for Linux, and multi‑network lab environments. At the time, I was working inside a temporary playground environment that couldn’t support these services. However, I reviewed each workflow conceptually and documented the correct steps for firewall engineering, IDS signature creation, endpoint detection, and Defense in Depth design.
+
