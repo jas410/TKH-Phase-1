@@ -91,6 +91,13 @@ Although I wasn’t able to complete the Week 7 assignments, this week focused o
 
 I wasn’t able to complete the practical components because the SIEM environment required a persistent Ubuntu VM capable of running Docker Engine, systemd services, and the full ELK stack. At the time, I was working inside a temporary playground environment that could not host long‑running containers or maintain the SIEM state needed for log ingestion and correlation. Without a real VM, Kibana could not boot, the enterprise logs could not be indexed, and the alerting pipeline could not be accessed. However, I reviewed the full workflow conceptually and documented the correct steps for SIEM setup, alert investigation, and threat correlation.
 
+# 📁 **Week 8 – Exploitation Fundamentals, Reverse Shells & Metasploit Verification**
+
+Although I wasn’t able to complete the Week 8 “Verification Protocol (Samba Conquest)” assignment, this week focused on understanding how attackers establish remote access and how security professionals verify and test vulnerabilities in controlled environments. The lab introduced the mechanics of reverse shells using Netcat, the fundamentals of exploit development, and the use of the Metasploit Framework to validate real-world vulnerabilities such as the Samba usermap_script exploit (CVE‑2007‑2447). I studied how reverse shells work at the network level, how Metasploit modules are configured, and how exploitation frameworks automate privilege escalation and remote command execution.
+
+I wasn’t able to complete the practical components because the provisioning script required a persistent Ubuntu VM capable of running Docker Engine, systemd services, and the full Metasploit environment. At the time, I was working inside a temporary playground environment that could not host long‑running containers, vulnerable Samba targets, or the Metasploit Framework. Without a real VM, the Samba target container could not be deployed, the exploit module could not be executed, and the reverse shell session could not be established. However, I reviewed the full workflow conceptually and documented the correct steps for reverse shell creation, Metasploit configuration, and exploit execution.
+
+
 
 # 📁 **Week 10 – Full‑Scope Incident Response & Disk Forensics**
 
