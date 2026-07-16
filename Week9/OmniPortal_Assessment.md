@@ -1,5 +1,5 @@
 ## OMNI-PORTAL ASSESSMENT REPORT
-**Operator:** Jasmine  
+**Operator:** Jasmine Adams
 **Deadline:** April 5 @ 11:59 PM
 
 
