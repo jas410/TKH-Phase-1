@@ -1,4 +1,4 @@
-# Week 1 — Linux Security Foundations
+# Week 1 — Linux Security Foundations 
 
 ## Objective
 Develop core Linux security skills by practicing system navigation, permission hardening, and basic threat detection using command‑line tools.
