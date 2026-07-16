@@ -126,3 +126,14 @@ Although I wasn’t able to complete the Week 12 TEPP assignment, this week repr
 The project involved four major components. In **Phase 0**, I was expected to perform structured reconnaissance across all three networks and document the findings in APA format. In **Phase 1**, I would identify vulnerabilities on each server, apply the correct remediation commands, and capture the before‑and‑after system states. **Phase 2** focused on forensic analysis, including cracking credentials, identifying attacker timestamps and IP addresses, and engineering an iptables rule to contain the threat. Finally, **Phase 3** required analyzing a command‑injection attack, configuring a listener, reviewing payload behavior, identifying the malicious process, and designing a final lockdown rule to secure the environment.
 
 I wasn’t able to complete the practical components because the TEPP provisioning script required a persistent Ubuntu VM capable of running multiple target environments simultaneously, along with all supporting services. At the time, I was working inside a temporary playground environment that couldn’t deploy the three‑subnet range, maintain state across phases, or generate the tepp_postmortem.md artifact. Without a real VM, the reconnaissance scans, remediation steps, forensic artifacts, and exploitation analysis could not be performed. However, I reviewed the full workflow conceptually and documented the correct structure and expectations for each phase of
+
+# TLAB5 — Budgeted Identity
+
+A Terraform project that builds a secure, least‑privilege AWS architecture for Titan FinTech. This lab includes a strict $10 monthly budget, a private S3 vault, a custom IAM role with surgical permissions, and an Ubuntu EC2 instance using that role. All resources are deployed and destroyed using Infrastructure as Code.
+
+## Included Artifacts
+
+- **main.tf** — Terraform configuration
+- **build_success.png** — Successful Terraform apply
+- **security_audit.png** — IAM role attached to EC2 instance
+- **destroy_verification.png** — Terraform destroy confirmation
